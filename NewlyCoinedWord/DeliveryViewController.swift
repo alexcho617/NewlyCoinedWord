@@ -13,6 +13,10 @@ class DeliveryViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        print("viewDidLoad")
+        print("gitTest")
+        print("gitTest")
+        print("gitTest")
     }
     
 
