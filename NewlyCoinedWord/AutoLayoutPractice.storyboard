@@ -551,57 +551,155 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gzn-7H-xF1">
-                                <rect key="frame" x="36" y="98" width="299" height="143"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <gestureRecognizers/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="w3w-JJ-rD4">
+                                <rect key="frame" x="20" y="70" width="335" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gzn-7H-xF1">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="gzn-7H-xF1" secondAttribute="height" multiplier="1:1" id="dT5-Xa-baV"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMo-EB-42p">
+                                        <rect key="frame" x="62" y="0.0" width="211" height="50"/>
+                                        <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.79974489800000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xmh-LB-kgs">
+                                        <rect key="frame" x="285" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.79974489800000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Xmh-LB-kgs" secondAttribute="height" multiplier="1:1" id="bLa-pN-s5e"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="playButtonClicked:" destination="ovP-e0-tPK" eventType="touchUpInside" id="Wrf-1o-Y7S"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="299" id="3M8-nc-OFn"/>
-                                    <constraint firstAttribute="height" constant="143" id="S6b-J9-qSD"/>
+                                    <constraint firstAttribute="height" constant="50" id="0fn-fi-4gO"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="0aM-Nx-IXP" appends="YES" id="HmL-KN-2U3"/>
-                                </connections>
-                            </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pwd-2g-B6j">
-                                <rect key="frame" x="169" y="117" width="152" height="88"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="D7B-wA-ku7">
+                                <rect key="frame" x="20" y="128" width="335" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PeL-oM-2I8">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="PeL-oM-2I8" secondAttribute="height" multiplier="1:1" id="eMI-V9-IFS"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oi-BZ-dSM">
+                                        <rect key="frame" x="62" y="0.0" width="211" height="50"/>
+                                        <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.79974489800000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8W-tT-zrB">
+                                        <rect key="frame" x="285" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.79974489800000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="J8W-tT-zrB" secondAttribute="height" multiplier="1:1" id="oVN-EW-agi"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="playButtonClicked:" destination="ovP-e0-tPK" eventType="touchUpInside" id="2yA-Ml-eRK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="uSc-2q-7lW"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="xo0-GP-ixs">
+                                <rect key="frame" x="20" y="186" width="335" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5bt-Eb-Yaa">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="5bt-Eb-Yaa" secondAttribute="height" multiplier="1:1" id="qu7-kP-PIV"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkx-iS-AeQ">
+                                        <rect key="frame" x="62" y="0.0" width="211" height="50"/>
+                                        <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.79974489800000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2a-7b-gQv">
+                                        <rect key="frame" x="285" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.79974489800000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="l2a-7b-gQv" secondAttribute="height" multiplier="1:1" id="lbh-9u-1jg"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="playButtonClicked:" destination="ovP-e0-tPK" eventType="touchUpInside" id="pvW-MZ-S3p"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="b40-DI-3xd"/>
+                                </constraints>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fEi-TH-phX">
+                                <rect key="frame" x="67" y="279" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.79974489800000004" colorSpace="custom" customColorSpace="sRGB"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="udm-bc-ujj" appends="YES" id="aDg-T4-Kqh"/>
-                                </connections>
-                            </imageView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cBu-RS-fqA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="gzn-7H-xF1" firstAttribute="leading" secondItem="cBu-RS-fqA" secondAttribute="leading" constant="36" id="KAs-5M-BKM"/>
-                            <constraint firstItem="gzn-7H-xF1" firstAttribute="top" secondItem="cBu-RS-fqA" secondAttribute="top" constant="48" id="KCF-tC-PLD"/>
+                            <constraint firstItem="xo0-GP-ixs" firstAttribute="top" secondItem="D7B-wA-ku7" secondAttribute="bottom" constant="8" id="0yE-wk-0i7"/>
+                            <constraint firstItem="D7B-wA-ku7" firstAttribute="top" secondItem="w3w-JJ-rD4" secondAttribute="bottom" constant="8" id="9yF-30-9A7"/>
+                            <constraint firstItem="xo0-GP-ixs" firstAttribute="leading" secondItem="cBu-RS-fqA" secondAttribute="leading" constant="20" id="IIR-Rd-IHh"/>
+                            <constraint firstItem="w3w-JJ-rD4" firstAttribute="leading" secondItem="cBu-RS-fqA" secondAttribute="leading" constant="20" id="K0D-5m-9bZ"/>
+                            <constraint firstItem="w3w-JJ-rD4" firstAttribute="top" secondItem="cBu-RS-fqA" secondAttribute="top" constant="20" id="ej8-gL-b0D"/>
+                            <constraint firstItem="cBu-RS-fqA" firstAttribute="trailing" secondItem="w3w-JJ-rD4" secondAttribute="trailing" constant="20" id="hvm-TX-q8g"/>
+                            <constraint firstItem="D7B-wA-ku7" firstAttribute="leading" secondItem="cBu-RS-fqA" secondAttribute="leading" constant="20" id="iAw-2T-HGJ"/>
+                            <constraint firstItem="cBu-RS-fqA" firstAttribute="trailing" secondItem="xo0-GP-ixs" secondAttribute="trailing" constant="20" id="iSQ-zx-lf9"/>
+                            <constraint firstItem="cBu-RS-fqA" firstAttribute="trailing" secondItem="D7B-wA-ku7" secondAttribute="trailing" constant="20" id="pHp-bX-nNb"/>
                         </constraints>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="zhi-LC-ruh" appends="YES" id="mff-cA-svj"/>
+                            <outletCollection property="gestureRecognizers" destination="AgP-ET-Vej" appends="YES" id="sf1-fW-6T1"/>
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="image" destination="gzn-7H-xF1" id="d9R-Rg-Y42"/>
+                        <outlet property="firstButton" destination="Xmh-LB-kgs" id="U5A-kF-d90"/>
+                        <outlet property="firstImage" destination="gzn-7H-xF1" id="d9R-Rg-Y42"/>
+                        <outlet property="firstLabel" destination="DMo-EB-42p" id="yua-bJ-HX1"/>
+                        <outlet property="secondButton" destination="J8W-tT-zrB" id="bfE-io-24G"/>
+                        <outlet property="secondImage" destination="PeL-oM-2I8" id="jWb-UF-N7M"/>
+                        <outlet property="secondLabel" destination="9oi-BZ-dSM" id="gLQ-Kh-PIO"/>
+                        <outlet property="thirdButton" destination="l2a-7b-gQv" id="tId-VB-HeG"/>
+                        <outlet property="thirdImage" destination="5bt-Eb-Yaa" id="4ic-wd-gbZ"/>
+                        <outlet property="thirdLabel" destination="zkx-iS-AeQ" id="BOL-2p-LTN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dlj-bS-1gh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="zhi-LC-ruh">
+                <tapGestureRecognizer id="AgP-ET-Vej">
                     <connections>
-                        <action selector="superView:" destination="ovP-e0-tPK" id="lRD-c7-jhl"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="0aM-Nx-IXP">
-                    <connections>
-                        <action selector="image:" destination="ovP-e0-tPK" id="73O-d6-baG"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="udm-bc-ujj">
-                    <connections>
-                        <action selector="innerImage:" destination="ovP-e0-tPK" id="6hb-aX-UUM"/>
+                        <action selector="superviewTap:" destination="ovP-e0-tPK" id="n1u-ib-ZVU"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -634,17 +732,23 @@
         <image name="smiley" catalog="system" width="128" height="123"/>
         <image name="squareshape.split.3x3" catalog="system" width="128" height="114"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -8,7 +8,20 @@
 import UIKit
 
 class WordViewController: UIViewController {
-    var wordDict = ["apple":"1.사과, 사과나무 (※사과나무는 apple tree가 보통)","banana":"1.바나나 （나무） ; 그 열매","carrot":"1.〔식물〕 당근; [가][불] 그 뿌리.","durian":"1.두리안: 동남 아시아산 판야과의 식용 과일.","eggplant":"1.〔식물〕 가지."]
+    var wordDict = [
+        "워드랩": "단어와 해답을 결합한 형태로, 문제에 대한 해답을 찾는 과정에서 단어들을 조합하여 새로운 해답을 찾는 것을 의미한다.",
+        "꿀잼": "매우 재미있는 것을 뜻하는 용어로, '꿀 같이 재미있음'의 의미를 담고 있다.",
+        "이따금": "가끔, 가끔씩의 뜻으로 사용되는 신조어이다.",
+        "품절남": "특정 상품이나 아이템이 품절이 되어 구하기 어려운 남성을 일컫는다.",
+        "먹통": "인터넷이나 통신 등에서 연결이 끊어져 동작하지 않는 상태를 의미한다.",
+        "와이퍼": "와이프를 지칭하는 말로, 애정어로 사용되기도 한다.",
+        "버카충": "버스, 카드, 충전을 합성한 용어.",
+        "페북통": "페이스북에 시간을 많이 쏟아붓는 사람을 비하하는 단어이다.",
+        "이거닷컴": "무슨 일인지, 상황 등을 이해하지 못할 때 사용되는 표현이다.",
+        "인싸": "인사이더의 줄임말로, 소속감이 강하고 사람들과 잘 어울리는 사람을 지칭한다."
+    ]
+
+
     
     //oulets
     @IBOutlet var wordTextField: UITextField!
@@ -29,14 +42,26 @@ class WordViewController: UIViewController {
     
     //actions
     @IBAction func textFieldEnter(_ sender: UITextField) {
-        //dict lookup and update result
-        let key = wordTextField.text
-        if wordDict[key!] != nil {
-            resultLabel.text = wordDict[key!]
+        guard let key = wordTextField.text else{
+            return
+        }
+        if  !key.isValidated{
+            //alert
+            let alert = UIAlertController(title: nil, message: "올바르지 않은 입력입니다", preferredStyle: .alert)
+            let cancelButton = UIAlertAction(title: "뒤로", style: .cancel)
+            alert.addAction(cancelButton)
+            present(alert, animated: true)
+            
+            resultLabel.text = ""
+            wordTextField.text = nil
+        }
+        else if wordDict.keys.contains(key) {
+            resultLabel.text = wordDict[key]
         }else{
-            resultLabel.text = "No Result"
+            resultLabel.text = "결과가 없습니다🥲"
         }
     }
+    
     
     @IBAction func suggestionButtonClicked(_ sender: UIButton) {
         wordTextField.text = sender.currentTitle
@@ -88,5 +113,11 @@ class WordViewController: UIViewController {
     @discardableResult
     func getRandomWord() -> String{
         return wordDict.randomElement()!.key
+    }
+}
+
+extension String {
+    var isValidated: Bool {
+        return !isEmpty && range(of: "^[가-힣ㄱ-ㅎㅏ-ㅣa-zA-Z]$", options: .regularExpression) == nil && count > 1
     }
 }

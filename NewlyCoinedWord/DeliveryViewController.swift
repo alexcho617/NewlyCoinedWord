@@ -9,26 +9,45 @@ import UIKit
 
 class DeliveryViewController: UIViewController {
 
-    @IBOutlet var image: UIImageView!
+    @IBOutlet var firstImage: UIImageView!
+    
+    @IBOutlet var secondImage: UIImageView!
+    
+    @IBOutlet var thirdImage: UIImageView!
+    
+    @IBOutlet var firstLabel: UILabel!
+    
+    @IBOutlet var secondLabel: UILabel!
+    
+    @IBOutlet var thirdLabel: UILabel!
+    
+    @IBOutlet var firstButton: UIButton!
+    
+    @IBOutlet var secondButton: UIButton!
+    
+    @IBOutlet var thirdButton: UIButton!
+    
+    let lyrics = ["HI Its me", "Hello its just me", "Hey its me"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print(image.isUserInteractionEnabled)
-        image.isUserInteractionEnabled = true
-        print(image.isUserInteractionEnabled)
+        print(firstImage.isUserInteractionEnabled)
+        firstImage.isUserInteractionEnabled = true
+        print(firstImage.isUserInteractionEnabled)
     }
 
-    @IBAction func image(_ sender: UITapGestureRecognizer) {
-        print("image")
+    @IBAction func superviewTap(_ sender: UITapGestureRecognizer) {
+//        firstImage.isHidden = !firstImage.isHidden
+//        firstImage.isHidden.toggle()
+        firstImage.isHidden = firstImage.isHidden == true ? false : true
     }
     
-    @IBAction func innerImage(_ sender: UITapGestureRecognizer) {
-        print("inner Image")
+    @IBAction func playButtonClicked(_ sender: UIButton) {
+        print(lyrics[sender.tag - 1])
     }
-    @IBAction func superView(_ sender: UITapGestureRecognizer) {
-        print("Superview")
-    }
+    
+    
     
 }
